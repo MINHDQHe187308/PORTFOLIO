@@ -83,7 +83,7 @@ document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
 
 
 
-const cvUrl = '/assets/cv/DuongQuangMinh_CV.pdf';
+const cvUrl = 'assets/cv/DuongQuangMinh_CV.pdf';
 
 async function loadPdfPreview() {
     const loadingElement = document.getElementById('previewLoading');
