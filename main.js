@@ -83,7 +83,7 @@ document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
 
 
 
-const cvUrl = 'https://s3.topcv.vn/data-cvs/topcv-cv-uploads/9f1feee237a5e87b9540b97cebe97930.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=s3-tp-topcv%2F20260213%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260213T095922Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Signature=7b19c0fffffba44d986e518fb87478d01c9a4803ac0ecb2974a2c2809c75efce';
+const cvUrl = '/assets/cv/DuongQuangMinh_CV.pdf';
 
 async function loadPdfPreview() {
     const loadingElement = document.getElementById('previewLoading');
