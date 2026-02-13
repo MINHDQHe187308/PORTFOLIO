@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duong Quang Minh | .NET Backend Developer</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.149/pdf.min.mjs" type="module"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+        <i class="bi bi-moon-stars-fill"></i>
+    </button>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- Brand becomes dropdown trigger -->
+            <div class="dropdown">
+                <a class="navbar-brand fw-bold fs-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false" id="brandDropdown">
+                    Contact
+                </a>
+                <ul class="dropdown-menu dropdown-menu-dark shadow-lg border-0 overflow-hidden"
+                    aria-labelledby="brandDropdown" style="min-width: 240px; border-radius: 16px;">
+
+                    <!-- Email -->
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3 py-3 hover-primary"
+                            href="mailto:minhduongqh0311@gmail.com">
+                            <i class="bi bi-envelope-at fs-4 text-danger"></i>
+                            <div>
+                                <div class="fw-bold">Gmail</div>
+                                <small class="text-muted">minhduongqh0311@gmail.com</small>
+                            </div>
+                        </a>
+                    </li>
+
+                    <!-- Phone -->
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3 py-3 hover-primary"
+                            href="tel:+84376993394">
+                            <i class="bi bi-telephone-fill fs-4 text-success"></i>
+                            <div>
+                                <div class="fw-bold">Phone</div>
+                                <small class="text-muted">+84 376 993 394</small>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <hr class="dropdown-divider bg-secondary opacity-25">
+                    </li>
+
+                    <!-- Facebook -->
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3 py-3 hover-primary"
+                            href="https://www.facebook.com/minhdq0311" target="_blank">
+                            <i class="bi bi-facebook fs-4" style="color: #1877f2;"></i>
+                            <span class="fw-bold">Facebook</span>
+                        </a>
+                    </li>
+
+                    <!-- Instagram -->
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3 py-3 hover-primary"
+                            href="https://www.instagram.com/_zunming.g_/" target="_blank">
+                            <i class="bi bi-instagram fs-4" style="color: #e1306c;"></i>
+                            <span class="fw-bold">Instagram</span>
+                        </a>
+                    </li>
+
+                    <!-- TikTok -->
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3 py-3 hover-primary"
+                            href="https://www.tiktok.com/@_zunming.g_" target="_blank">
+                            <i class="bi bi-tiktok fs-4" style="color: #161616;"></i>
+                            <span class="fw-bold">TikTok</span>
+                        </a>
+                    </li>
+
+                    <!-- Locket (using heart/chat icon as approximation) -->
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center gap-3 py-3 hover-primary"
+                            href="https://locket.cam/minh2045?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnGmM_j5VnAdk4_gKfEkUEI1n6BG7rYF6YQ2O-5gEcFGT7wgfl7e3fWtksIqY_aem_Zmw7me_lsC8Ov5PhhYmpIA"
+                            target="_blank">
+                            <i class="bi bi-heart-fill fs-4" style="color: #eef445d6;"></i>
+                            <span class="fw-bold">Locket</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero d-flex align-items-center text-center" id="home">
+        <div class="container position-relative z-1">
+            <h1 class="display-3 fw-bold mb-3" data-aos="fade-up">Dương Minh</h1>
+            <h2 class="display-6 text-primary mb-4" data-aos="fade-up" data-aos-delay="200">
+                <span id="typed"></span>
+            </h2>
+            <p class="lead fs-4 mb-5" data-aos="fade-up" data-aos-delay="400">
+                DEV FullStack .NET
+            </p>
+
+            <!-- Chỉ giữ preview CV, click để xem full -->
+            <div class="cv-preview-mini text-center mt-4" data-aos="zoom-in" data-aos-delay="600">
+                <div class="pdf-preview-container shadow-lg position-relative overflow-hidden rounded-4 cursor-pointer"
+                    id="previewTrigger" style="width: 380px; height: 260px; background: #1e293b; margin: 0 auto;">
+
+                    <canvas id="pdfPreviewCanvas" class="position-absolute top-0 start-0 w-100"></canvas>
+
+                    <div id="previewLoading"
+                        class="position-absolute top-50 start-50 translate-middle text-white fs-6 d-flex flex-column align-items-center">
+                        Đang tải...
+                        <div class="spinner-border spinner-border-sm text-primary mt-2" role="status"></div>
+                    </div>
+
+                    <div
+                        class="position-absolute bottom-0 start-0 end-0 p-3 bg-dark bg-opacity-75 text-center text-white small fw-bold hover-primary d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-arrows-fullscreen"></i>
+                        View Full
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">About Me</h2>
+            <div class="row justify-content-center align-items-center">
+                <!-- Ảnh cá nhân -->
+                <div class="col-lg-4 text-center mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="profile-img-container">
+                        <img src="assets/images/profile.jpg" alt="Duong Quang Minh"
+                            class="profile-img rounded-circle img-fluid shadow-lg" data-bs-toggle="modal"
+                            data-bs-target="#profileModal">
+                        <div class="profile-overlay">
+                            <i class="bi bi-search fs-3"></i>
+                            <p class="mt-2 mb-0">Click to zoom</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nội dung text -->
+                <div class="col-lg-8" data-aos="fade-left" data-aos-delay="100">
+                    <p class="lead">
+                        Software Engineering student at FPT University, specializing in .NET backend development.<br>
+                        Hands-on experience building enterprise systems — notably the real-time Shipping Progress
+                        Visualization System deployed at DENSO warehouse.<br><br>
+                        Passionate about clean architecture, performance optimization, real-time features, and scalable
+                        backend solutions.
+                    </p>
+                    <p class="mt-4">
+                        Currently seeking internship/full-time opportunities in backend development.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal cho ảnh zoom -->
+    <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+            <div class="modal-content bg-dark bg-opacity-90 border-0">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close btn-close-white fs-3" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center p-0">
+                    <img src="assets/images/profile.jpg" alt="Duong Quang Minh - Full View"
+                        class="modal-profile-img img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Experience -->
+    <section id="experience" class="section bg-dark-secondary py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Experience</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card-dark p-4 mb-4 shadow" data-aos="fade-right">
+                        <h5 class="fw-bold">DENSO Internship</h5>
+                        <p class="text-secondary mb-2">Backend Developer Intern • 2025</p>
+                        <ul class="mb-0">
+                            <li>Developed & deployed real-time Shipping Progress Visualization System</li>
+                            <li>Implemented order tracking, Excel import/export, background workers, automated email
+                                notifications</li>
+                            <li>Tech stack: ASP.NET Core, EF Core, SQL Server, FullCalendar, Plotly.js</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Featured Projects</h2>
+            <div class="row g-4">
+
+                <!-- Project 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card-modern shadow-lg" data-tilt>
+                        <div class="project-card-inner">
+                            <!-- Overlay gradient + content -->
+                            <div class="project-overlay">
+                                <div class="project-overlay-content d-flex flex-column justify-content-end h-100 p-4">
+                                    <h5 class="fw-bold mb-2">Shipping Progress System</h5>
+                                    <p class="text-white small mb-3">
+                                        Real-time warehouse visualization platform with order tracking, Excel
+                                        automation, background jobs & notifications.
+                                    </p>
+                                    <div class="tech-badges mb-3">
+                                        <span class="badge bg-primary me-1">ASP.NET Core</span>
+                                        <span class="badge bg-primary me-1">EF Core</span>
+                                        <span class="badge bg-primary me-1">SQL Server</span>
+                                        <span class="badge bg-info me-1">FullCalendar</span>
+                                        <span class="badge bg-info">Plotly.js</span>
+                                    </div>
+                                    <a href="https://github.com/MINHDQHe187308/ShippingSystem" target="_blank"
+                                        class="btn btn-sm btn-light mt-auto">
+                                        <i class="bi bi-github me-1"></i> View on GitHub
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Placeholder image / gradient background -->
+                            <div class="project-image bg-gradient-primary">
+                                <div
+                                    class="placeholder-content text-center text-white d-flex align-items-center justify-content-center h-100">
+                                    <div>
+                                        <i class="bi bi-diagram-3-fill fs-1 mb-3"></i>
+                                        <h6>Shipping Progress</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card-modern shadow-lg" data-tilt>
+                        <div class="project-card-inner">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content d-flex flex-column justify-content-end h-100 p-4">
+                                    <h5 class="fw-bold mb-2">Manager Student (WPF)</h5>
+                                    <p class="text-white small mb-3">
+                                        Desktop application for managing student records, attendance, grades and
+                                        reports.
+                                    </p>
+                                    <div class="tech-badges mb-3">
+                                        <span class="badge bg-primary me-1">C#</span>
+                                        <span class="badge bg-primary me-1">WPF</span>
+                                        <span class="badge bg-primary me-1">Entity Framework</span>
+                                        <span class="badge bg-info">SQL Server</span>
+                                    </div>
+                                    <a href="https://github.com/Minh2045/managerstudent" target="_blank"
+                                        class="btn btn-sm btn-light mt-auto">
+                                        <i class="bi bi-github me-1"></i> View on GitHub
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="project-image bg-gradient-success">
+                                <div
+                                    class="placeholder-content text-center text-white d-flex align-items-center justify-content-center h-100">
+                                    <div>
+                                        <i class="bi bi-person-vcard-fill fs-1 mb-3"></i>
+                                        <h6>Student Manager</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card-modern shadow-lg" data-tilt>
+                        <div class="project-card-inner">
+                            <div class="project-overlay">
+                                <div class="project-overlay-content d-flex flex-column justify-content-end h-100 p-4">
+                                    <h5 class="fw-bold mb-2">Holiday Planners</h5>
+                                    <p class="text-white small mb-3">
+                                        Web-based travel booking system with payment gateway, real-time chat &
+                                        authentication.
+                                    </p>
+                                    <div class="tech-badges mb-3">
+                                        <span class="badge bg-primary me-1">Java Servlet</span>
+                                        <span class="badge bg-primary me-1">MySQL</span>
+                                        <span class="badge bg-primary me-1">WebSocket</span>
+                                        <span class="badge bg-info me-1">OAuth2</span>
+                                        <span class="badge bg-info">VNPAY</span>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-outline-light mt-auto disabled">
+                                        <i class="bi bi-hourglass-split me-1"></i> In Progress
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="project-image bg-gradient-warning">
+                                <div
+                                    class="placeholder-content text-center text-white d-flex align-items-center justify-content-center h-100">
+                                    <div>
+                                        <i class="bi bi-airplane-fill fs-1 mb-3"></i>
+                                        <h6>Holiday Planners</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills" class="section bg-dark-secondary py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Technical Skills</h2>
+            <div class="row g-4 justify-content-center text-center">
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Microsoft_.NET_logo.svg"
+                            alt=".NET logo" class="skill-logo mb-3" loading="lazy">
+                        <span>ASP.NET Core</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Microsoft_SQL_Server_2025_icon.svg"
+                            alt="SQL Server logo" class="skill-logo mb-3" loading="lazy">
+                        <span>SQL Server</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                            alt="JavaScript logo" class="skill-logo mb-3" loading="lazy">
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Unity_logo.svg" alt="Unity logo"
+                            class="skill-logo mb-3" loading="lazy">
+                        <span>Unity</span>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                            alt="HTML5 logo" class="skill-logo mb-3" loading="lazy">
+                        <span>HTML</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg"
+                            alt="CSS3 logo" class="skill-logo mb-3" loading="lazy">
+                        <span>CSS</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="600">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="Git logo"
+                            class="skill-logo mb-3" loading="lazy">
+                        <span>Git</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="700">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg"
+                            alt="GitHub logo" class="skill-logo mb-3" loading="lazy"
+                            style="filter: brightness(0) invert(1);">
+                        <span>GitHub</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="800">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Jira_Logo.svg" alt="Jira logo"
+                            class="skill-logo mb-3" loading="lazy">
+                        <span>Jira</span>
+                    </div>
+                </div>
+
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-delay="900">
+                    <div class="skill-item d-flex flex-column align-items-center p-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Docker_Logo.svg" alt="Docker logo"
+                            class="skill-logo mb-3" loading="lazy">
+                        <span>Docker</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates -->
+    <section id="certificates" class="section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Certificates</h2>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Certificate 1 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-dark certificate-card h-100 shadow text-center p-4">
+                        <i class="bi bi-award-fill fs-1 text-primary mb-3"></i>
+                        <h5 class="fw-bold mb-2">Google IT Support Professional Certificate</h5>
+                        <!-- Bạn thay tên thật nếu nhớ -->
+                        <p class="text-secondary mb-3">
+                            Specialization by Google<br>
+                            Foundational IT skills, troubleshooting, networking, OS, security
+                        </p>
+                        <small class="text-muted d-block mb-3">Issued by Coursera</small>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/HHTPJPZ10JPH"
+                            target="_blank" class="btn btn-sm btn-outline-primary">
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-dark certificate-card h-100 shadow text-center p-4">
+                        <i class="bi bi-award-fill fs-1 text-primary mb-3"></i>
+                        <h5 class="fw-bold mb-2">IBM Full Stack Software Developer Professional Certificate</h5>
+                        <!-- Thay nếu khác -->
+                        <p class="text-secondary mb-3">
+                            Full-stack development with HTML, CSS, JS, React, Node.js, Python, Django, Cloud
+                        </p>
+                        <small class="text-muted d-block mb-3">Issued by Coursera</small>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/OUW44K14QLC3"
+                            target="_blank" class="btn btn-sm btn-outline-primary">
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-dark certificate-card h-100 shadow text-center p-4">
+                        <i class="bi bi-award-fill fs-1 text-primary mb-3"></i>
+                        <h5 class="fw-bold mb-2">Meta Front-End Developer Professional Certificate</h5>
+                        <!-- Thay nếu khác -->
+                        <p class="text-secondary mb-3">
+                            HTML, CSS, JavaScript, React, UI/UX principles, version control
+                        </p>
+                        <small class="text-muted d-block mb-3">Issued by Coursera</small>
+                        <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/6LPEQL4SXJ5L"
+                            target="_blank" class="btn btn-sm btn-outline-primary">
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 (single course) -->
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-dark certificate-card h-100 shadow text-center p-4">
+                        <i class="bi bi-award-fill fs-1 text-primary mb-3"></i>
+                        <h5 class="fw-bold mb-2">Programming with JavaScript</h5>
+                        <!-- Thay tên khóa học thật nếu nhớ -->
+                        <p class="text-secondary mb-3">
+                            Core JavaScript concepts, DOM manipulation, asynchronous programming
+                        </p>
+                        <small class="text-muted d-block mb-3">Issued by Coursera</small>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/33LFO7R9O6YD"
+                            target="_blank" class="btn btn-sm btn-outline-primary">
+                            View Certificate
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section text-center py-5">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title mb-5">Get In Touch</h2>
+            <p class="lead mb-4">Open to Fresher, full-time roles, or freelance opportunities.</p>
+            <div class="d-flex justify-content-center gap-5 fs-2">
+                <a href="mailto:minhduongqh0311@gmail.com" class="text-light hover-primary"><i
+                        class="bi bi-envelope-at"></i></a>
+                <a href="tel:+84376993394" class="text-light hover-primary"><i class="bi bi-telephone"></i></a>
+                <a href="https://github.com/MINHDQHe187308" target="_blank" class="text-light hover-primary"><i
+                        class="bi bi-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal xem CV với pdf.js viewer -->
+    <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content bg-dark border-0">
+                <div class="modal-header border-0 d-flex justify-content-between align-items-center">
+                    <h5 class="modal-title text-white ms-3" id="cvModalLabel">Duong Quang Minh - CV</h5>
+                    <button type="button" class="btn-close btn-close-white me-3" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 position-relative" style="height: calc(100vh - 70px);">
+                    <!-- Container cho pdf.js viewer -->
+                    <iframe id="pdfViewerIframe" src="" width="100%" height="100%" style="border: none;"
+                        allowfullscreen></iframe>
+
+                    <div id="pdfLoading" class="position-absolute top-50 start-50 translate-middle text-white fs-4">
+                        Đang tải CV... <div class="spinner-border text-primary mt-2" role="status"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto" muted>
+        <source src="assets/audio/comearoundme.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Nút điều khiển nhạc (góc dưới bên phải) -->
+    <button id="musicToggle" class="music-toggle" aria-label="Toggle background music">
+        <i class="bi bi-volume-mute-fill"></i> <!-- icon bootstrap icons -->
+    </button>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
